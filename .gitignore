@@ -1,0 +1,2 @@
+#ignoring metadata create by "eclipse php ide" because i have shifted to atom and manually has installed packages for addition "mysqli" support for php
+.metadata/*
