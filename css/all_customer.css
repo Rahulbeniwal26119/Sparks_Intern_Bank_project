@@ -1,4 +1,5 @@
 *{
+  color: black;
   overflow-x: hidden;
   margin : 0;
   padding : 0;
@@ -67,6 +68,5 @@ a
 }
 .transfer-button
 {
-
   /* display: none; */
 }
