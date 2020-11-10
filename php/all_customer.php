@@ -31,9 +31,11 @@ for($i=0; $i<sizeof($local_store["name"]);$i++)
   <div class='col-sm-2 grid-item  py-3' id="email"> $email[$i] </div>
   <div class='col-sm-2 grid-item  py-3' id="acc">$acc[$i] </div>
     <p class='col-sm-2 grid-item  py-3 customer${i}' id="balance"><span>&#8360</span>. $balance[$i] </p>
-    <div class='col-sm-2 grid-item  py-3' id='div-tsn${i}' > <button class="btn-primary" id="btn-transfer${i}">Transfer</div>
+    <div class='col-sm-2 grid-item  py-3' id='div-tsn${i}' > <button class="btn-primary" id="btn-transfer${i}" onclick="transfer('$name[$i]' ,'$email[$i]', '$acc[$i]' , '$balance[$i]' , '$i');">Transfer</div>
     <div class='col-sm-2 grid-item  py-3' id='div-view${i}'><button class="btn-primary" id="btn-view${i}" onclick="showModal('$name[$i]' ,'$email[$i]', '$acc[$i]' , '$balance[$i]' , '$i');">ViewDetail</div>
-
+    <script>
+    sessionStorage.setItem('acc${i}' , $acc[$i]);
+    </script>
   </div>
   </div>
   <div id="modal-space"> </div>
@@ -47,4 +49,10 @@ echo <<<_END
 </script>
 _END;
 // echo "</div>";
+$amount =  $_COOKIE['amount'];
+$acc =  $_COOKIE['acc'];
+$query  = "UPDATE Customers SET current_balance=$amount WHERE Acc=$acc;";
+// $result = $conn->query($query);
+// if(!$result) die($conn->error);
+echo $query;
  ?>
