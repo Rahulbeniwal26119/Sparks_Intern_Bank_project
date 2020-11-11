@@ -51,8 +51,24 @@ _END;
 // echo "</div>";
 $amount =  $_COOKIE['amount'];
 $acc =  $_COOKIE['acc'];
-$query  = "UPDATE Customers SET current_balance=$amount WHERE Acc=$acc;";
+$curacc = $_COOKIE['curacc'];
+$query  = "UPDATE Customers SET current_balance = current_balance + $amount WHERE Acc=$acc;";
+$query2 = "UPDATE Customers SET current_balance = current_balance - $amount WHERE Acc=$curacc;";
 // $result = $conn->query($query);
 // if(!$result) die($conn->error);
-echo $query;
+// echo $query;
+echo $query2;
+$result1 = $conn->query($query);
+if(!$result1) die($conn->error);
+$result2 = $conn->query($query2);
+if(!$result2) die($conn->error);
+echo <<<_END
+<script>
+document.cookie = name + '=; Max-Age=0'
+document.cookie = 'acc=;Max-Age=0';
+document.cookie = 'amount=;Max-Age=0';
+document.cookie = 'curacc=;Max-Age=0';
+window.location.reload();
+</script>
+_END;
  ?>
