@@ -1,8 +1,9 @@
-
+var current_account;
 var accountNumber = [];
 var accountCounter = 0;
 function showModal(name , email , acc , balance , index)
 {
+  current_account = acc;
 id = "btn-view" + index;
 divId = 'div-view'+index;
 // console.log(id , divId);
@@ -40,6 +41,7 @@ $('#myModal').modal("show");
 
 function transfer(name , email , acc , balance , index)
 {
+    current_account = acc;
 id = "btn-view" + index;
 divId = 'div-view'+index;
 console.log(id , divId);
@@ -130,12 +132,17 @@ $("#transfer").click(function(){
   {
     document.cookie = `amount=${amount}`;
     document.cookie = `acc=${accNo}`;
+    document.cookie = `curacc=${current_account}`;
+
   }
   else
   {
     sessionStorage.removeItem("db_ok");
   }
-  console.log(sessionStorage.db_ok);
-  document.cookie = "";
+  if(valid_acc && valid_amount)
+  {
+    window.location.reload();
+      window.location.reload();
+  }
 })
 }
