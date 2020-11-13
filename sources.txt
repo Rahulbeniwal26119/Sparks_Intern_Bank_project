@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-This is resource file.
-=======
-<<<<<<< HEAD
-resources used in this project
-Bootstrap
-=======
->>>>>>> parent of dd45cdb... Adding resources file
->>>>>>> parent of ae91ac8... removing merge conflit
