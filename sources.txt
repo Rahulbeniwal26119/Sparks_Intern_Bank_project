@@ -1,2 +1,5 @@
+<<<<<<< HEAD
 resources used in this project
 Bootstrap
+=======
+>>>>>>> parent of dd45cdb... Adding resources file
