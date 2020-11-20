@@ -1,5 +1,5 @@
 <?php
-include_once  './user.php';
+include_once  '../php/user.php';
 require  '../html/navbar.html';
 include '../html/allcustomer.html';
 $name = $local_store[name];
