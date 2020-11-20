@@ -48,16 +48,11 @@ echo <<<_END
 
 </script>
 _END;
-// echo "</div>";
 $amount =  $_COOKIE['amount'];
 $acc =  $_COOKIE['acc'];
 $curacc = $_COOKIE['curacc'];
 $query  = "UPDATE Customers SET current_balance = current_balance + $amount WHERE Acc=$acc;";
 $query2 = "UPDATE Customers SET current_balance = current_balance - $amount WHERE Acc=$curacc;";
-// $result = $conn->query($query);
-// if(!$result) die($conn->error);
-// echo $query;
-echo $query2;
 $result1 = $conn->query($query);
 if(!$result1) die($conn->error);
 $result2 = $conn->query($query2);
