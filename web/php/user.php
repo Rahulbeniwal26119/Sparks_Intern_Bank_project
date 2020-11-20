@@ -1,5 +1,5 @@
 <?php
-require_once  'database_detail.php';
+require_once  '../php/database_detail.php';
 // require_once '../css/navbar.css';
 // echo $un;
 // echo $hn;
