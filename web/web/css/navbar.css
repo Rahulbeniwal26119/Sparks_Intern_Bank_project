@@ -1,0 +1,79 @@
+*
+{
+  box-sizing: border-box;
+  margin : 0;
+  padding: 0;
+
+}
+.logo
+{
+  color: orange;
+  position: absolute;
+  left: 0;
+  font-size: 90px;
+  bottom: 570px;
+  /* top: 0px; */
+  background-color: orange:
+  border : 1px solid white;
+}
+body
+{
+  margin-left: 0;
+
+}
+nav
+{  background-color: #24252A;
+}
+#navbar
+{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-element
+{
+  list-style-type: none;
+  padding : 10px;
+  background-color: grey;
+  border-radius: 2%;
+
+}
+.nav-element
+{
+  margin-left: 2%;
+}
+a:hover
+{
+  text-decoration: none;
+  color: white;
+}
+.nav-element:hover
+{
+  background-color: #24252A;
+}
+@media only screen and (max-width : 606px) {
+
+  #navbar
+  {
+    display: inline;
+  }
+.nav-element:hover
+  {
+  background-color:  #24252A;
+  color: pink;
+  
+  }
+  .nav-element:active
+  {
+    background-color:  #24252A;
+    color: pink;
+
+  }
+  a{
+    color: white;
+  }
+}
+a
+{
+  color: orange;
+}

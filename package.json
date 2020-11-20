@@ -2,7 +2,7 @@
   "name" : "bank-basic",
   "version" : "1.0.0",
   "script" : {
-    "start" : "php index.php"
+    "start" : "php launch.php"
   },
   "author" : "Rahul Beniwal",
   "license" : "ISC"
