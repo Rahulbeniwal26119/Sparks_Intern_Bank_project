@@ -1,7 +1,8 @@
 <?php
-include_once  'user.php';
-require  '../html/navbar.html';
-include '../html/allcustomer.html';
+echo "hello";
+// include_once  'user.php';
+// require  '../html/navbar.html';
+// include '../html/allcustomer.html';
 $name = $local_store[name];
 $email = $local_store[email];
 $acc = $local_store[acc];
